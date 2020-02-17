@@ -1,0 +1,77 @@
+.title
+{
+    position: absolute;
+    top: 180px;
+    left: 78px;
+    width: 963px;
+    height: 132px;
+
+    overflow: hidden;
+    text-align: left;
+    color: #238441;
+    font-family: ProximaNovaLight, Arial, serif;
+    font-size: 60px;
+    line-height: 60px;
+}
+.Btn
+{
+    position: absolute;
+
+    width: 781px;
+    height: 102px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    cursor: pointer;
+
+    border: 1px solid #969696;
+    background: #FFCB05;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    behavior: url(css3pie/PIE.htc);
+    box-shadow: 0px 2px 0px #D09C2B;
+
+    idleBgColor:#FFCB05;
+    actBgColor:#D09C2B;
+}
+.BtnLong
+{
+
+    width: 896px;
+    height: 102px;
+}
+.Btn1
+{
+    left: 78px;
+    top:347px;
+}
+.Btn2
+{
+    left: 78px;
+    top:472px;
+}
+.Btn3
+{
+    left: 78px;
+    top:597px;
+}
+.Btn4
+{
+    left: 78px;
+    top:722px;
+}
+
+.BtnText
+{
+
+    color: #000000;
+    font-family: ProximaNovaLight, Arial, serif;
+    font-size: 56px;
+    line-height: 24px;
+    width: 281px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+}

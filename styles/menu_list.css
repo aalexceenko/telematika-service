@@ -1,0 +1,175 @@
+
+.title
+{
+    position: absolute;
+    top: 180px;
+    left: 78px;
+    width: 963px;
+    text-align: left;
+    color: #238441;
+    font-family: ProximaNova, Arial, serif;
+    font-size: 60px;
+    line-height: 60px;
+}
+
+.cancelBtn
+{
+    position: absolute;
+    left:1011px;
+    top:190px;
+    cursor: pointer;
+}
+.cancelText
+{
+    color: #464646;
+    font-family: ProximaNova, Arial, serif;
+    font-size: 30px;
+    line-height: 24px;
+}
+.loader
+{
+    position: absolute;
+    top: 578px;
+
+    width: 395px;
+    height: 62px;
+    left: 423px;
+
+
+}
+.langText
+{
+    color: #238441;
+    font-family: ProximaNova, Arial, serif;
+    font-size: 30px;
+    line-height: 32px;
+}
+.cardReturnText
+{
+    color: #238441;
+    font-family: ProximaNova, Arial, serif;
+    font-size: 30px;
+    line-height: 28px;
+}
+
+
+.homeBtn
+{
+    width: 358px;
+    height: 80px;
+    position: absolute;
+    cursor: pointer;
+
+
+    background: #E9F2E3;
+    border: 1px solid #238441;
+    box-sizing: border-box;
+    border-radius: 12px;
+    behavior: url(css3pie/PIE.htc);
+    visibility: hidden;
+
+    idleBgColor:#E9F2E3;
+    actBgColor:#238441;
+
+}
+.btnLine1
+{
+    top:312px;
+}
+.btnLine2
+{
+    top:417px;
+}
+.btnLine3
+{
+    top:522px;
+}
+.btnLine4
+{
+    top:627px;
+}
+.btnLineLeft
+{
+    left:78px;
+}
+.btnLineMiddle
+{
+    left:461px;
+}
+.btnLineRight
+{
+    left:845px;
+}
+
+
+.menuBtnText
+{
+    color: #238441;
+    font-family: ProximaNova, Arial, serif;
+    font-size: 30px;
+    line-height: 30px;
+}
+
+
+
+.homeBtnCancel
+{
+    width: 290px;
+    height: 80px;
+    position: absolute;
+    cursor: pointer;
+
+
+    background: #E9F2E3;
+    border: 1px solid #238441;
+    box-sizing: border-box;
+    border-radius: 12px;
+    behavior: url(css3pie/PIE.htc);
+
+    idleBgColor:#E9F2E3;
+    actBgColor:#238441;
+
+    left:78px;
+    top:742px;
+
+}
+
+.BtnAccept
+{
+
+    width: 301px;
+    height: 82px;
+    position: absolute;
+    left: 902px;
+    top:742px;
+    text-align: left;
+
+    border: 1px solid #D09C2B;
+    background: #FFCB05;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    behavior: url(css3pie/PIE.htc);
+    box-shadow: 0px 2px 0px #D09C2B;
+
+    idleBgColor:#FFCB05;
+    actBgColor:#D09C2B;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+.BtnAcceptText
+{
+    color: #000000;
+    font-family: ProximaNova, Arial, serif;
+    font-size: 30px;
+    line-height: 30px;
+
+    width: 10px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

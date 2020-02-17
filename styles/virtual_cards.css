@@ -1,0 +1,174 @@
+.title
+{
+    position: absolute;
+    top: 180px;
+    left: 78px;
+    width: 963px;
+    height: 132px;
+
+    overflow: hidden;
+    text-align: left;
+    color: #238441;
+    font-family: ProximaNova, Arial, serif;
+    font-size: 60px;
+    line-height: 60px;
+}
+.pinWrapper
+{
+    position: absolute;
+    top: 0px;
+    z-index: 1;
+}
+.pinWrapperUL
+{
+
+    padding-top: 20px;
+}
+.pinWrapperLI
+{
+    display: inline;
+}
+
+.cardItemImage
+{
+    width: 321px;
+    height: 202px;
+    /*border: black solid 1px;*/
+    float: left;
+    margin-left: 20px;
+    background-image: url("../img/btn_card.png");
+    cursor: pointer;
+
+}
+.cardItem
+{
+    position: absolute;
+    width: 321px;
+    height: 202px;
+    float: left;
+    margin-left: 20px;
+    cursor: pointer;
+
+
+    /* background: #E9F2E3; */
+    border: 1px solid #238441;
+    border-radius: 12px;
+    behavior: url(css3pie/PIE.htc);
+    box-shadow: 0px 2px 0px #238441;
+
+    idleBgColor:#E9F2E3;
+    actBgColor:#238441;
+    z-index: 2;
+
+
+
+
+    visibility: hidden;
+}
+
+.cardName
+{
+
+    width: 236px;
+    height: 5px;
+
+    margin-top: 30px;
+    margin-left: 79px;
+
+    font-family: ProximaNova, Arial, serif;
+    font-size: 30px;
+    line-height: 36px;
+    color: #238441;
+}
+.cardPan
+{
+
+    width: 236px;
+    height: 5px;
+
+    margin-top: 90px;
+    margin-left: 15px;
+
+    font-family: ProximaNovaLight, Arial, serif;
+    font-size: 60px;
+    line-height: 60px;
+    color: #238441;
+}
+
+.cardItemLine1
+{
+    top:397px;
+
+}
+.cardItemLine2
+{
+    top:622px;
+}
+.cardItemLeft
+{
+    left:78px;
+
+}
+.cardItemMiddle
+{
+    left:423px;
+}
+.cardItemRight
+{
+    left:768px;
+}
+
+.cardLogo
+{
+
+    background-repeat: no-repeat;
+    width: 49px;
+    height: 48px;
+    margin-top: 28px;
+    margin-left: 26px;
+    left: 26px;
+    top: 34px;
+    float: left;
+}
+.cardLogoMC
+{
+    background-image: url("../img/icon_mc.png");
+}
+.cardLogoVISA
+{
+    background-image: url("../img/icon_visa.png");
+}
+.cardLogoMIR
+{
+    background-image: url("../img/icon_mir.png");
+}
+.cardName
+{
+
+    width: 236px;
+    height: 5px;
+
+    margin-top: 34px;
+    margin-left: 84px;
+
+    font-family: ProximaNova, Arial;
+    font-size: 30px;
+    line-height: 36px;
+    color: #286030;
+}
+
+/* pin */
+.cardPan
+{
+
+    width: 236px;
+    height: 5px;
+
+    margin-top: 90px;
+    margin-left: 28px;
+
+    font-family: ProximaNova, Arial;
+    font-size: 60px;
+    line-height: 60px;
+    color: #286030;
+}

@@ -1,0 +1,192 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+        "http://www.w3.org/TR/html4/loose.dtd">
+<html lang="">
+<head>
+    <meta charset="UTF-8" content="text/javascript">
+    <title>MENU</title>
+    <link type="text/css" rel="stylesheet" href="styles/globalStyle_test.css">
+    <link type="text/css" rel="stylesheet" href="styles/menu_test.css">
+    <style type="text/css">@font-face {font-family: ProximaNova;src: url(font/ProximaNova-Light.eot?#iefix) format('embedded-opentype');}</style>
+
+    <script src="js/screens_test.js" type="text/javascript"></script>
+    <script src="js/loader_test.js" type="text/javascript"></script>
+    <script src="js/main_test.js" type="text/javascript"></script>
+    <script FOR="NDCKBD" EVENT="KeyPressed( bkey, txt);" language="JavaScript" type="text/javascript">
+		{
+			// CLEAR code - 31, CANCEL - 27, ENTER - 13
+			page.proccesBtn(bkey);
+		}
+    </script>
+    <script type="text/javascript">
+		var page = new PINClassWrapper();
+		function PINClassWrapper() {
+			this.scrData;
+
+			this.proccesBtn = function (key) {
+				switch (key) {
+					default:
+
+						if(!!this.scrData[key])
+						{
+							if(!!this.scrData[key].onclick)
+							{
+								animateButton(document.getElementById(key),1);
+								setTimeout(this.scrData[key].onclick,100);
+							}
+						}
+						break;
+				}
+			};
+			this.onBlindBtn = function () {
+				if(!!this.scrData.onLoadSay)
+					this.atm.Say(this.scrData.onLoadSay);
+			};
+			this.loaded = function(_scrData) {
+				if(typeof (_scrData) !== 'undefined' && _scrData.isObject === true)
+				{
+					this.scrData = _scrData;
+				}
+			};
+		}
+    </script>
+</head>
+<body class="" onload="page.loaded(event);" onkeypress="page.proccesBtn(event.keyCode);">
+<div class="BGLine1"></div>
+<div class="BGLine2"></div>
+<div class="BGLine3"></div>
+<div class="BGLine4"></div>
+<div class="logo"></div>
+<div class="field"></div>
+
+<div id="alertDIV">
+    <div class="alertIcon"></div>
+    <div class="alertCount"><span id="alertCount">3</span></div>
+    <div class="alertText"><span id="alertText">Для вас есть специальные предложения</span></div>
+</div>
+
+<div class="title" id="title">Настройки</div>
+<div id="cancelBtn" class="cancelBtn" onclick="page.proccesBtn(this.id);">
+
+    <table style="position: absolute; top: -7px; left:0; text-align: right; height: 62px; width: 134px; overflow: hidden;">
+        <tr>
+            <td>
+                <span class="cancelText" id="cancelBtnText">
+                        отменить
+                </span>
+            </td>
+        </tr>
+    </table>
+    <table style="position: absolute; top: 0; left:148px; height: 100%; width: 100px; ">
+        <tr>
+            <td>
+                <img src="img/icon_cross_blind.png" alt="" id="cancelBtnIcon">
+            </td>
+        </tr>
+    </table>
+</div>
+
+
+<div id="Btn1" class="Btn Btn1 BtnLong" onclick="page.proccesBtn(this.id);">
+    <table style="position: absolute; top: 0; left:26px; height: 100%; width: 100px; ">
+        <tr>
+            <td>
+                <img src="img/icon_pin_blind.png" alt="" id="Btn1Icon">
+            </td>
+        </tr>
+    </table>
+    <table style="position: absolute; top: 0; left:100px; height: 100%; width: 680px; overflow: hidden;">
+        <tr>
+            <td>
+                <span class="BtnText" id="Btn1Text">
+                        сменить пин
+                </span>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div id="Btn2" class="Btn Btn2 BtnLong" onclick="page.proccesBtn(this.id);">
+    <table style="position: absolute; top: 0; left:26px; height: 100%; width: 100px; ">
+        <tr>
+            <td>
+                <img src="img/icon_card3_blind.png" alt="" id="Btn2Icon">
+            </td>
+        </tr>
+    </table>
+    <table style="position: absolute; top: 0; left:100px; height: 100%; width: 680px; overflow: hidden;">
+        <tr>
+            <td>
+                <span class="BtnText" id="Btn2Text">
+                        заказать картузаказать картузаказать картузаказать картузаказать картузаказать картузаказать карту
+                </span>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div id="Btn3" class="Btn Btn3 BtnLong" onclick="page.proccesBtn(this.id);">
+    <table style="position: absolute; top: 0; left:26px; height: 100%; width: 100px; ">
+        <tr>
+            <td>
+                <img src="img/icon_repid_blind.png" alt="" id="Btn3Icon">
+            </td>
+        </tr>
+    </table>
+    <table style="position: absolute; top: 0; left:100px; height: 100%; width: 680px; overflow: hidden;">
+        <tr>
+            <td>
+                <span class="BtnText" id="Btn3Text">
+                        автоплатеж
+                </span>
+            </td>
+        </tr>
+    </table>
+</div>
+
+<div id="Btn4" class="Btn Btn4 BtnLong" onclick="page.proccesBtn(this.id);">
+    <table style="position: absolute; top: 0; left:26px; height: 100%; width: 100px; ">
+        <tr>
+            <td>
+                <img src="img/icon_statement_blind.png" alt="" id="Btn4Icon">
+            </td>
+        </tr>
+    </table>
+    <table style="position: absolute; top: 0; left:100px; height: 100%; width: 680px; overflow: hidden;">
+        <tr>
+            <td>
+                <span class="BtnText" id="Btn4Text">
+                        минивыписка
+                </span>
+            </td>
+        </tr>
+    </table>
+</div>
+
+
+
+
+
+<div id="exitBtn" class="exitBtn" onclick="page.proccesBtn(this.id);">
+    <table style="position: absolute; top: 0; left:24px; height: 100%; width: 100px; ">
+        <tr>
+            <td>
+                <img src="img/icon_cardReturn_blind.png" alt="" id="exitBtnIcon">
+            </td>
+        </tr>
+    </table>
+    <table style="position: absolute; top: 11px; left:84px; height: 57px; width: 135px; overflow: hidden;">
+        <tr>
+            <td>
+                <span class="cardReturnText" id="exitBtnText">
+                        вернуть карту
+                </span>
+            </td>
+        </tr>
+    </table>
+</div>
+<div class="bottomInfo1 bolotniy" id="bottomInfo1">АО "Россельхозбанк" Служба поддержки <br> 8 800 100-0-100</div>
+<div class="bottomInfo2 yellow" id="bottomInfo2">Банкомат №S1AM0001 Москва Пресненская набережная д.10, стр. 1</div>
+<img style="position: absolute; top: 0; left: 0; opacity: 0.5; display: none" src="makets/PIN%20Cange.png" alt=""/>
+</body>
+
+</html>

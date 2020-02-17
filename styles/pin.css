@@ -1,0 +1,107 @@
+.title
+{
+    position: absolute;
+    top: 385px;
+    width: 100%;
+    text-align: center;
+    color: #000000;
+    font-family: ProximaNovaLight, Arial, serif;
+    font-size: 60px;
+    line-height: 64px;
+}
+.pinWrapper
+{
+    position: relative;
+    top:447px;
+    display: table;
+    margin: 0 auto;
+}
+.pinWrapperUL
+{
+
+    padding-top: 20px;
+}
+.pinWrapperLI
+{
+    display: inline;
+}
+
+.pinItem
+{
+    width: 90px;
+    height: 90px;
+    /*border: black solid 1px;*/
+    float: left;
+    margin-left: 20px;
+
+}
+.pinDot
+{
+
+    width: 28px;
+    height: 28px;
+    margin-top: 40px;
+    margin-left: 30px;
+    left: 32px;
+    top: 32px;
+    display: none;
+}
+.pinLine
+{
+    background-image: url("../img/pin_line.png");
+    width: 91px;
+    height: 5px;
+    position: absolute;
+    bottom: 0px;
+}
+.cancelBtn
+{
+    position: absolute;
+    left:1011px;
+    top:190px;
+}
+.cancelText
+{
+    color: #464646;
+    font-family: ProximaNova, Arial, serif;
+    font-size: 30px;
+    line-height: 24px;
+}
+.langBtn
+{
+    position: absolute;
+    top: 732px;
+
+    width: 395px;
+    height: 62px;
+    left: 443px;
+    overflow: hidden;
+    cursor: pointer;
+
+    border: 1px solid #969696;
+    background: #FFFFFF;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 30px;
+    behavior: url(css3pie/PIE.htc);
+    box-shadow: 0px 2px 0px #969696;
+
+    idleBgColor:#FFFFFF;
+    actBgColor:#E9F2E3;
+
+}
+.langText
+{
+    color: #238441;
+    font-family: ProximaNova, Arial, serif;
+    font-size: 30px;
+    line-height: 32px;
+}
+.cardReturnText
+{
+    color: #238441;
+    font-family: ProximaNova, Arial, serif;
+    font-size: 30px;
+    line-height: 28px;
+}
+

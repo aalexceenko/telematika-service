@@ -1,0 +1,183 @@
+.title
+{
+    position: absolute;
+    top: 180px;
+    left: 78px;
+    width: 963px;
+    height: 132px;
+
+    overflow: hidden;
+    text-align: left;
+    color: #238441;
+    font-family: ProximaNova, Arial, serif;
+    font-size: 60px;
+    line-height: 60px;
+}
+.acceptedTitle
+{
+    position: absolute;
+    left: 78px;
+    top:312px;
+
+    overflow: hidden;
+    text-align: left;
+    color: #464646;
+    font-family: ProximaNova, Arial, serif;
+    font-size: 30px;
+    line-height: 36px
+
+}
+
+
+.inputField
+{
+    position: relative;
+    top:363px;
+    left: 38px;
+    background-color: #fff7da;
+    width: 705px;
+    height: 120px;
+
+}
+
+.inputText
+{
+    text-align: left;
+    color: #238441;
+    white-space: nowrap;
+    font-family: ProximaNova, Arial, serif;
+    font-size: 90px;
+    line-height: 85px
+}
+
+.helpInfo
+{
+    position: absolute;
+    top: 716px;
+    left: 78px;
+    width: 584px;
+    height: 110px;
+
+    overflow: hidden;
+
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    text-align: left;
+    color: #464646;
+    font-family: ProximaNova, Arial, serif;
+    font-size: 30px;
+    line-height: 24px;
+}
+.alertInfo
+{
+    position: absolute;
+    top: 574px;
+    left: 78px;
+    width: 665px;
+    height: 110px;
+
+    overflow: hidden;
+
+
+
+    text-align: left;
+    color: #238441;
+    font-family: ProximaNova, Arial, serif;
+    font-size: 30px;
+    line-height: 36px;
+}
+.accessibleNotesText
+{
+    position: absolute;
+    top: 505px;
+    left: 78px;
+    width: 113px;
+    height: 47px;
+
+    overflow: hidden;
+
+
+
+    text-align: left;
+    color: #464646;
+    font-family: ProximaNova, Arial, serif;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+
+.accessibleNotesWrapper
+{
+    position: relative;
+    top:389px;
+    left: 201px;
+    display: table;
+}
+
+
+
+.NotesItem
+{
+    width: 93px;
+    height: 40px;
+    /*border: black solid 1px;*/
+    float: left;
+    margin-right: 15px;
+
+}
+
+
+
+
+.fastBtn
+{
+    height: 64px;
+    position: absolute;
+    top:761px;
+    text-align: center;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    background: #FFCB05;
+    border: 1px solid #D09C2B;
+    border-radius: 30px;
+    box-shadow: 0px 2px 0px #D09C2B;
+    behavior: url(css3pie/PIE.htc);
+
+    idleBgColor:#FFCB05;
+    actBgColor:#D09C2B;
+
+}
+.fastBtn1
+{
+    left: 78px;
+}
+
+.fastBtn2
+{
+    left: 267px;
+}
+
+.fastBtn3
+{
+    left: 456px;
+}
+
+.fastBtnText
+{
+    color: #238441;
+    font-family: ProximaNova, Arial, serif;
+    font-size: 30px;
+    line-height: 32px;
+
+    width: 10px;
+
+    white-space: nowrap;
+
+    text-overflow: ellipsis;
+
+    margin-left: 20px;
+    margin-right: 20px;
+}

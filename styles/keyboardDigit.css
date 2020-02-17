@@ -1,0 +1,163 @@
+.dKeyboard
+{
+    width: 471px;
+    height: 667px;
+    position: absolute;
+    top:295px;
+    left: 840px;
+
+    background: #FFCB05;
+    border: 1px solid #D09C2B;
+    border-radius: 30px;
+    box-shadow: 0px 0px 10px #666666;
+    behavior: url(css3pie/PIE.htc);
+}
+.dKeyboardBtn
+{
+
+    width: 90px;
+    height: 90px;
+    /*padding-top: 15px;
+    padding-left: 30px;*/
+    cursor: pointer;
+
+    background: #FFCB05;
+    border: 2px solid #FFFFFF;
+    border-radius: 24px;
+
+    behavior: url(css3pie/PIE.htc);
+
+    idleBgColor:#FFCB05;
+    actBgColor:#FFFFFF;
+
+}
+.dKeyboardBtnC
+{
+    background-image: url("../img/btn_dk_c.png");
+    width: 91px;
+    height: 92px;
+    padding-top: 20px;
+    padding-left: 30px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.dKeyboardBtnAct
+{
+    background-image: url("../img/btn_dk_act.png");
+}
+.dKeyboardBtnText
+{
+
+    color: #464646;
+    font-family: ProximaNova, Arial, serif;
+    font-size: 52px;
+    line-height: 62px;
+}
+.dKeyboardBtnSpan
+{
+    position:relative;
+    top: 15px;
+    left: 30px;
+}
+.dKeyboardBtnX
+{
+    position: absolute;
+    top:405px;
+    left: 60px;
+}
+.dKeyboardBtn0
+{
+    position: absolute;
+    top:405px;
+    left: 180px;
+}
+.dKeyboardBtnZ
+{
+    position: absolute;
+    top:405px;
+    left: 290px;
+
+}
+
+.dKeyboardBtn1
+{
+    position: absolute;
+    top:290px;
+    left: 60px;
+}
+.dKeyboardBtn2
+{
+    position: absolute;
+    top:290px;
+    left: 180px;
+}
+.dKeyboardBtn3
+{
+    position: absolute;
+    top:290px;
+    left: 290px;
+}
+
+.dKeyboardBtn4
+{
+    position: absolute;
+    top:175px;
+    left: 60px;
+}
+.dKeyboardBtn5
+{
+    position: absolute;
+    top:175px;
+    left: 180px;
+}
+.dKeyboardBtn6
+{
+    position: absolute;
+    top:175px;
+    left: 290px;
+}
+
+.dKeyboardBtn7
+{
+    position: absolute;
+    top:60px;
+    left: 60px;
+}
+.dKeyboardBtn8
+{
+    position: absolute;
+    top:60px;
+    left: 180px;
+}
+.dKeyboardBtn9
+{
+    position: absolute;
+    top:60px;
+    left: 290px;
+}
+
+.dKeyboardAccept
+{
+    width: 321px;
+    height: 82px;
+    position: absolute;
+    left: 70px;
+    top: 527px;
+    cursor: pointer;
+
+    background: #FFFFFF;
+    border: 1px solid #D09C2B;
+    border-radius: 12px;
+    box-shadow: 0px 2px 0px #D09C2B;
+    behavior: url(css3pie/PIE.htc);
+
+    idleBgColor:#F0F5E0;
+    actBgColor:#F0F5E0;
+}
+.dKeyboardAcceptText
+{
+    color: #238441;
+    font-family: ProximaNova, Arial, serif;
+    font-size: 30px;
+    line-height: 30px;
+}

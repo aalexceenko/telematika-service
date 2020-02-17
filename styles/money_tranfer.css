@@ -1,0 +1,94 @@
+.title
+{
+    position: absolute;
+    top: 180px;
+    left: 78px;
+    width: 963px;
+    height: 132px;
+
+    overflow: hidden;
+    text-align: left;
+    color: #238441;
+    font-family: ProximaNova, Arial, serif;
+    font-size: 60px;
+    line-height: 60px;
+}
+.acceptedTitle
+{
+    position: absolute;
+    left: 78px;
+    top:365px;
+
+    overflow: hidden;
+    text-align: left;
+    color: #464646;
+    font-family: ProximaNova, Arial, serif;
+    font-size: 30px;
+    line-height: 36px
+
+}
+
+
+.inputField
+{
+    position: relative;
+    top:422px;
+    left: 40px;
+    background-color: #fff7da;
+    width: 705px;
+    height: 120px;
+
+}
+
+.inputText
+{
+    text-align: left;
+    color: #238441;
+    white-space: nowrap;
+    font-family: ProximaNova, Arial, serif;
+    font-size: 50px;
+    line-height: 85px
+}
+
+.helpInfo
+{
+    position: absolute;
+    top: 716px;
+    left: 78px;
+    width: 584px;
+    height: 110px;
+
+    overflow: hidden;
+
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    text-align: left;
+    color: #464646;
+    font-family: ProximaNova, Arial, serif;
+    font-size: 30px;
+    line-height: 24px;
+}
+.alertInfo
+{
+    position: absolute;
+    top: 622px;
+    left: 78px;
+    width: 665px;
+    height: 200px;
+
+    overflow: hidden;
+
+
+
+    text-align: left;
+    color: #238441;
+    font-family: ProximaNova, Arial, serif;
+    font-size: 30px;
+    line-height: 36px;
+}
+
+
+
+

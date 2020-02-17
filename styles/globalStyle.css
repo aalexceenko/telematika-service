@@ -1,0 +1,286 @@
+@font-face {
+    font-family: ProximaNova; /* Имя шрифта */
+
+    src: url(../font/mark_simonson_-_proxima_nova_regular.eot);
+    src: url('../font/mark_simonson_-_proxima_nova_regular.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: ProximaNovaLight; /* Имя шрифта */
+    src: url(../font/mark_simonson_-_proxima_nova_light.eot);
+    src: url('../font/mark_simonson_-_proxima_nova_light.eot?#iefix') format('embedded-opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+html
+{
+    width: 1280px; height: 1024px; overflow: hidden; border: none;
+}
+body
+{
+    width: 1280px; height: 1024px; overflow: hidden;border: none; margin: 0 0 0 0; background-color: #DCDCD2;
+}
+.btn
+{
+    cursor: pointer;
+}
+.bodyRiver
+{
+    background-image: url("../img/bg_river.png"); background-repeat: no-repeat;
+}
+.bodyGrey
+{
+    background-image: url("../img/bg_grey.png"); background-repeat: no-repeat;
+}
+.bodyBlack
+{
+    background-image: url("../img/bg_black.png"); background-repeat: no-repeat;
+}
+.logo
+{
+    position: absolute;
+
+    background-image: url("../img/Logo.png");
+    background-repeat: no-repeat;
+    top: 41px;
+    left: 810px;
+    width: 295px;
+    height: 69px;
+}
+.yCard
+{
+    position: absolute;
+    background-image: url("../img/icon_ycard.png");
+    width: 87px;
+    height: 86px;
+    top: 180px;
+    left: 826px;
+}
+
+.bottomInfo1
+{
+    position: absolute;
+    top: 909px;
+    left: 822px;
+    width: 310px;
+
+    color: #FFFFFF;
+    font-family: ProximaNova, Arial, serif;
+    font-size: 20px;
+    line-height: 24px;
+}
+.bottomInfo2
+{
+    position: absolute;
+    top: 909px;
+    left: 306px;
+    width: 450px;
+
+    color: #FFFFFF;
+    font-family: ProximaNova, Arial, serif;
+    font-size: 20px;
+    line-height: 24px;
+}
+.yellow
+{
+    color: #6F6E21;/*FFCB05*/
+}
+.bolotniy
+{
+    color:#FFCB05; /*6F6E21*/
+}
+.exitBtnImage
+{
+    position: absolute;
+    background-image: url("../img/btn_exit.png");
+    width: 219px;
+    height: 82px;
+    overflow: hidden;
+    left: 38px;
+    top:902px;
+    cursor: pointer;
+}
+.exitBtn
+{
+    position: absolute;
+    /*background-image: url("../img/btn_exit.png");*/
+    width: 219px;
+    height: 82px;
+    overflow: hidden;
+    left: 38px;
+    top:902px;
+    cursor: pointer;
+
+    border: 1px solid #969696;
+    background: #FFFFFF;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    behavior: url(css3pie/PIE.htc);
+    box-shadow: 0px 2px 0px #969696;
+
+    idleBgColor:#FFFFFF;
+    actBgColor:#E9F2E3;
+
+}
+
+.cardReturnText
+{
+    color: #238441;
+    font-family: ProximaNova, Arial, serif;
+    font-size: 30px;
+    line-height: 28px;
+}
+
+.cancelBtn
+{
+    position: absolute;
+    left:1011px;
+    top:190px;
+    cursor: pointer;
+}
+.cancelText
+{
+    color: #464646;
+    font-family: ProximaNova, Arial, serif;
+    font-size: 30px;
+    line-height: 24px;
+}
+
+.fieldImage
+{
+    position: absolute;
+    top:121px;
+    background-image: url("../img/field_white.png");
+    background-repeat: no-repeat;
+    width: 1265px;
+    height: 780px;
+    left: 10px;
+}
+.field
+{
+    position: absolute;
+    top:152px;
+    width: 1204px;
+    height: 720px;
+    left: 38px;
+    background: #FFFFFF;
+    -webkit-border-radius: 6px;
+    -moz-border-radius: 6px;
+    border-radius: 6px;
+    behavior: url(css3pie/PIE.htc);
+    box-shadow: 0px 0px 10px #666666;
+
+}
+.fieldGreen
+{
+
+    background: #A6CE39;
+}
+.fieldYellow
+{
+    background: #FFCB05;
+}
+.fieldBlack
+{
+    background: #000000;
+}
+
+.alertIcon
+{
+    position: absolute;
+    top: 44px;
+    left: 38px;
+    background-image: url("../img/icon_alert.png");
+    width: 68px;
+    height: 56px;
+}
+
+.alertTimerIcon
+{
+    position: absolute;
+    top: 44px;
+    left: 38px;
+    background-image: url("../img/gif/sector-transparent.gif");
+    width: 70px;
+    height: 70px;
+}
+.alertCount
+{
+    position: absolute;
+    top: 58px;
+    left: 86.5px;
+    color: #FFFFFF;
+    font-family: ProximaNova, Arial, serif;
+    font-size: 20px;
+    line-height: 24px;
+    width: 280px;
+}
+.alertText
+{
+    position: absolute;
+    top: 58px;
+    left: 114px;
+    color: #2B6030;
+    font-family: ProximaNova, Arial, serif;
+    font-size: 20px;
+    line-height: 24px;
+    width: 280px;
+}
+.alertTimerText
+{
+    position: absolute;
+    top: 58px;
+    left: 114px;
+    color: #238441;
+    font-family: ProximaNova, Arial, serif;
+    font-size: 20px;
+    line-height: 24px;
+    width: 280px;
+    font-weight: bold;
+}
+.loader
+{
+    position: absolute;
+    top: 578px;
+    width: 395px;
+    height: 62px;
+    left: 423px;
+}
+.BGLine1
+{
+    position: absolute;
+    top: 0;
+    left:768px;
+    background: #FFCB05;
+    width: 20px;
+    height: 1024px;
+}
+.BGLine2
+{
+    position: absolute;
+    top: 0;
+    left:788px;
+    background: #2B6030;
+    width: 336px;
+    height: 1024px;
+}
+.BGLine3
+{
+    position: absolute;
+    top: 0;
+    left:1124px;
+    background: #238441;
+    width: 98px;
+    height: 1024px;
+}
+.BGLine4
+{
+    position: absolute;
+    top: 0;
+    left:1222px;
+    background: #6AA744;
+    width: 58px;
+    height: 1024px;
+}

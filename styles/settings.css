@@ -1,0 +1,115 @@
+.title
+{
+    position: absolute;
+    top: 180px;
+    left: 78px;
+    width: 963px;
+    height: 132px;
+
+    overflow: hidden;
+    text-align: left;
+    color: #238441;
+    font-family: ProximaNova, Arial, serif;
+    font-size: 60px;
+    line-height: 60px;
+}
+.Setting
+{
+    position: absolute;
+    width: 620px;
+    height: 62px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    cursor: pointer;
+    left: 78px;
+    display: none;
+}
+.Setting1
+{
+    top: 312px;
+}
+.Setting2
+{
+    top: 397px;
+}
+.Setting3
+{
+    top: 482px;
+}
+.Setting4
+{
+    top: 602px;
+}
+.SettingText
+{
+    color: #464646;
+    font-family: ProximaNova, Arial, serif;
+    font-size: 30px;
+    line-height: 30px;
+    white-space: nowrap;
+}
+.disabled.SettingText
+{
+    color: #969696;
+
+}
+.Btn1
+{
+    position: absolute;
+
+    width: 425px;
+    height: 80px;
+    top: 742px;
+    left: 78px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    cursor: pointer;
+
+    border: 1px solid #238441;
+    background: #F0F5E0;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    behavior: url(css3pie/PIE.htc);
+
+    idleBgColor:#F0F5E0;
+    actBgColor:#238441;
+}
+.Btn2
+{
+    position: absolute;
+
+
+    width: 281px;
+    height: 82px;
+
+    top: 742px;
+    left: 922px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    cursor: pointer;
+
+    border: 1px solid #D09C2B;
+    background: #FFCB05;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    behavior: url(css3pie/PIE.htc);
+    box-shadow: 0px 2px 0px #D09C2B;
+
+    idleBgColor:#FFCB05;
+    actBgColor:#FFCB05;
+}
+.BtnText
+{
+
+    color: #238441;
+    font-family: ProximaNova, Arial, serif;
+    font-size: 30px;
+    line-height: 30px;
+    white-space: nowrap;
+
+}

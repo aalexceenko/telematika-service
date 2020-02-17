@@ -1,0 +1,225 @@
+
+.title
+{
+    position: absolute;
+    top: 180px;
+    left: 78px;
+    width: 963px;
+    text-align: left;
+    color: #238441;
+    font-family: ProximaNova, Arial, serif;
+    font-size: 60px;
+    line-height: 60px;
+}
+
+.cancelBtn
+{
+    position: absolute;
+    left:1011px;
+    top:190px;
+    cursor: pointer;
+}
+.cancelText
+{
+    color: #464646;
+    font-family: ProximaNova, Arial, serif;
+    font-size: 30px;
+    line-height: 24px;
+}
+.loader
+{
+    position: absolute;
+    top: 578px;
+
+    width: 395px;
+    height: 62px;
+    left: 423px;
+
+
+}
+.langText
+{
+    color: #238441;
+    font-family: ProximaNova, Arial, serif;
+    font-size: 30px;
+    line-height: 32px;
+}
+.cardReturnText
+{
+    color: #238441;
+    font-family: ProximaNova, Arial, serif;
+    font-size: 30px;
+    line-height: 28px;
+}
+
+
+.homeBtn
+{
+    width: 320px;
+    height: 80px;
+    position: absolute;
+    cursor: pointer;
+
+
+    background: #E9F2E3;
+    border: 1px solid #238441;
+    box-sizing: border-box;
+    border-radius: 12px;
+    behavior: url(css3pie/PIE.htc);
+
+    idleBgColor:#E9F2E3;
+    actBgColor:#238441;
+
+}
+.btn1
+{
+    left: 78px;
+    top:427px;
+}
+.btn2
+{
+    left: 78px;
+    top:532px;
+
+}
+.btn3
+{
+    left: 78px;
+    top:637px;
+
+}
+.btn4
+{
+    left: 78px;
+    top:742px;
+}
+.btn5
+{
+    left: 423px;
+    top:427px;
+
+}
+.btn6
+{
+    left: 423px;
+    top:532px;
+}
+.btn7
+{
+    left: 423px;
+    top:637px;
+}
+.btn8
+{
+    left: 423px;
+    top:742px;
+}
+
+.btnWithdrawal
+{
+
+    width: 394px;
+    height: 202px;
+    position: absolute;
+    left: 808px;
+    top:297px;
+    cursor: pointer;
+
+    background: #238441;
+    border: 1px solid #2B6030;
+    border-radius: 12px;
+    box-shadow: 0px 2px 0px #2B6030;
+    behavior: url(css3pie/PIE.htc);
+
+    idleBgColor:#238441;
+    actBgColor:#2B6030;
+}
+.btnWithdrawalText
+{
+    color: #FFFFFF;
+    font-family: ProximaNova, Arial, serif;
+    font-size: 40px;
+    line-height: 24px;
+}
+.btnDepositText
+{
+    color: #238441;
+    font-family: ProximaNova, Arial, serif;
+    font-size: 40px;
+    line-height: 24px;
+}
+
+.btnDeposit
+{
+
+    width: 395px;
+    height: 202px;
+    position: absolute;
+    left: 808px;
+    top:522px;
+    cursor: pointer;
+
+    background: #FFCB05;
+    border: 1px solid #D09C2B;
+    border-radius: 12px;
+    box-shadow: 0px 2px 0px #D09C2B;
+    behavior: url(css3pie/PIE.htc);
+
+    idleBgColor:#FFCB05;
+    actBgColor:#D09C2B;
+}
+.menuBtnText
+{
+    color: #238441;
+    font-family: ProximaNova, Arial, serif;
+    font-size: 30px;
+    line-height: 30px;
+}
+
+.listWrapper
+{
+    position: relative;
+    top:297px;
+    display: table;
+    left: 78px;
+}
+
+.listItem
+{
+    width: 90px;
+    height: 90px;
+    /*border: black solid 1px;*/
+    float: left;
+    margin-right: 25px;
+    cursor: pointer;
+
+
+}
+
+.balanceBtn
+{
+
+    width: 291px;
+    height: 63px;
+    position: absolute;
+    left: 860px;
+    top:762px;
+    text-align: center;
+    cursor: pointer;
+
+    background: #FFCB05;
+    border: 1px solid #D09C2B;
+    border-radius: 30px;
+    box-shadow: 0px 2px 0px #D09C2B;
+    behavior: url(css3pie/PIE.htc);
+
+    idleBgColor:#FFCB05;
+    actBgColor:#D09C2B;
+}
+.balanceBtnText
+{
+    color: #238441;
+    font-family: ProximaNova, Arial, serif;
+    font-size: 30px;
+    line-height: 30px;
+}

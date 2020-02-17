@@ -1,0 +1,195 @@
+.title
+{
+    position: absolute;
+    top: 180px;
+    left: 78px;
+    width: 963px;
+    height: 132px;
+
+    overflow: hidden;
+    text-align: left;
+    color: #238441;
+    font-family: ProximaNova, Arial, serif;
+    font-size: 60px;
+    line-height: 60px;
+}
+.helpInfo
+{
+    position: absolute;
+    top: 690px;
+    left: 78px;
+    width: 584px;
+    height: 110px;
+
+    overflow: hidden;
+
+
+    white-space: nowrap;
+    text-overflow: ellipsis;
+
+    text-align: left;
+    color: #238441;
+    font-family: ProximaNova, Arial, serif;
+    font-size: 30px;
+    line-height: 36px;
+}
+
+.acceptedTitle
+{
+    position: absolute;
+    left: 78px;
+    top:312px;
+
+    overflow: hidden;
+    text-align: left;
+    color: #464646;
+    font-family: ProximaNova, Arial, serif;
+    font-size: 30px;
+    line-height: 36px
+
+}
+.inputField
+{
+    position: relative;
+    top:363px;
+    left: 38px;
+    background-color: #fff7da;
+    width: 705px;
+    height: 120px;
+
+}
+
+.inputText
+{
+    text-align: left;
+    color: #238441;
+    white-space: nowrap;
+    font-family: ProximaNova, Arial, serif;
+    font-size: 90px;
+    line-height: 85px
+}
+
+.btnWithdrawal
+{
+
+    width: 395px;
+    height: 202px;
+    position: absolute;
+    left: 808px;
+    top:297px;
+    cursor: pointer;
+
+    background: #238441;
+    border: 1px solid #2B6030;
+    border-radius: 12px;
+    box-shadow: 0px 2px 0px #2B6030;
+    behavior: url(css3pie/PIE.htc);
+
+    idleBgColor:#238441;
+    actBgColor:#2B6030;
+}
+.btnWithdrawalText
+{
+    color: #FFFFFF;
+    font-family: ProximaNova, Arial, serif;
+    font-size: 40px;
+    line-height: 24px;
+}
+
+
+.balanceBtn
+{
+    width: 301px;
+    height: 82px;
+    position: absolute;
+    left: 902px;
+    top:742px;
+    text-align: center;
+
+
+
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+
+    background: #FFCB05;
+    border: 1px solid #D09C2B;
+    border-radius: 12px;
+    box-shadow: 0px 2px 0px #D09C2B;
+    behavior: url(css3pie/PIE.htc);
+
+
+    idleBgColor:#FFCB05;
+    actBgColor:#D09C2B;
+}
+.balanceBtnText
+{
+    color: #238441;
+    font-family: ProximaNova, Arial, serif;
+    font-size: 30px;
+    line-height: 30px;
+
+    width: 10px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.btn1Text
+{
+    color: #238441;
+    font-family: ProximaNova, Arial, serif;
+    font-size: 30px;
+    line-height: 30px;
+
+    width: 10px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    idleBgColor:#238441;
+    actBgColor:#FFFFFF;
+}
+.btn1
+{
+    width: 271px;
+    height: 80px;
+    position: absolute;
+    left: 78px;
+    top:742px;
+    text-align: left;
+    cursor: pointer;
+
+    background: #FFFFFF;
+    border: 1px solid #238441;
+    box-sizing: border-box;
+    border-radius: 12px;
+    behavior: url(css3pie/PIE.htc);
+
+    idleBgColor:#E9F2E3;
+    actBgColor:#238441;
+}
+
+.btn2
+{
+
+    width: 271px;
+    height: 80px;
+    position: absolute;
+    left: 373px;
+    top:742px;
+    text-align: left;
+    cursor: pointer;
+
+    background: #E9F2E3;
+    border: 1px solid #238441;
+    box-sizing: border-box;
+    border-radius: 12px;
+    behavior: url(css3pie/PIE.htc);
+
+    idleBgColor:#E9F2E3;
+    actBgColor:#238441;
+}

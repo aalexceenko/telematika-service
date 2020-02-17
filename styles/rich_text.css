@@ -1,0 +1,109 @@
+.title
+{
+    position: absolute;
+    top: 180px;
+    left: 78px;
+    width: 963px;
+    height: 132px;
+
+    overflow: hidden;
+    text-align: left;
+    color: #238441;
+    font-family: ProximaNovaLight, Arial, serif;
+    font-size: 60px;
+    line-height: 60px;
+}
+.acceptedTitle
+{
+    position: absolute;
+    left: 78px;
+    top:292px;
+    width: 1100px;
+    overflow: hidden;
+    text-align: left;
+    color: #464646;
+    font-family: ProximaNova, Arial, serif;
+    font-size: 30px;
+    line-height: 36px
+}
+.acceptedTitle2
+{
+    top:532px;
+
+}
+.checkDataField
+{
+    position: relative;
+    left: 38px;
+    background-image: url("../img/check_data_field.png");
+    width: 1165px;
+    height: 325px;
+
+
+
+    background: #fff7da;
+    border-radius: 0px 6px 6px 0px;
+    behavior: url(css3pie/PIE.htc);
+
+}
+.inputText
+{
+
+    top: 20px;
+    text-align: left;
+    color: #238441;
+    white-space: nowrap;
+    font-family: ProximaNova, Arial, serif;
+    font-size: 30px;
+    line-height: 36px;
+    margin-left: 38px;
+
+}
+
+.BtnAccept
+{
+
+    width: 301px;
+    height: 82px;
+    position: absolute;
+    left: 902px;
+    top:742px;
+    text-align: left;
+
+    border: 1px solid #D09C2B;
+    background: #FFCB05;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    behavior: url(css3pie/PIE.htc);
+    box-shadow: 0px 2px 0px #D09C2B;
+
+    idleBgColor:#FFCB05;
+    actBgColor:#D09C2B;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
+}
+.BtnAcceptText
+{
+    color: #000000;
+    font-family: ProximaNova, Arial, serif;
+    font-size: 30px;
+    line-height: 30px;
+
+    width: 10px;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.Field1
+{
+    top: 369px;
+}
+.Field2
+{
+    top: 469px;
+}

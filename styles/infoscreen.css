@@ -1,0 +1,88 @@
+.title
+{
+    position: absolute;
+    top: 476px;
+    left: 140px;
+    width: 1000px;
+    text-align: center;
+    color: #238441;
+    font-family: ProximaNovaLight, Arial, serif;
+    font-size: 60px;
+    line-height: 60px;
+}
+.icon
+{
+
+    position: relative;
+    background-image: url("../img/icon_warning.png");
+
+    top: 296px;
+    width: 124px;
+    height: 124px;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+
+}
+.icon_success
+{
+    background-image: url("../img/icon_success.png");
+    width: 121px;
+    height: 121px;
+}
+.icon_fatal
+{
+    background-image: url("../img/icon_fatal.png");
+    width: 138px;
+    height: 121px;
+}
+.icon_error
+{
+    background-image: url("../img/icon_error.png");
+    width: 121px;
+    height: 121px;
+}
+
+.langBtn
+{
+    position: absolute;
+    top: 732px;
+
+    width: 311px;
+    height: 62px;
+    left: 484px;
+    overflow: hidden;
+    cursor: pointer;
+
+    border: 1px solid #969696;
+    background: #238441;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 30px;
+    behavior: url(css3pie/PIE.htc);
+    box-shadow: 0px 2px 0px #2B6030;
+
+    idleBgColor:#238441;
+    actBgColor:#2B6030;
+
+}
+.langText
+{
+    color: #FFFFFF;
+    font-family: ProximaNova, Arial;
+    font-size: 30px;
+    line-height: 32px;
+}
+.msg
+{
+    position: absolute;
+    top: 600px;
+    left: 140px;
+    width: 1000px;
+    text-align: center;
+    color: #464646;
+    font-family: ProximaNova, Arial;
+    font-size: 30px;
+    line-height: 36px;
+
+
+}

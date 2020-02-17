@@ -1,0 +1,117 @@
+.titleDIV
+{
+    position: absolute;
+    top: 372px;
+    left: 78px;
+    width: 300px;
+    height: 150px;
+}
+
+.titleText
+{
+    color: #FFFFFF;
+    font-family: ProximaNova;
+    font-size: 80px;
+    line-height: 80px;
+}
+.noteDIV
+{
+    position: absolute;
+    top: 266px;
+    left: 827px;
+    width: 300px;
+    height: 150px;
+}
+
+.noteText
+{
+    color: #FFC805;
+    font-family: ProximaNova;
+    font-size: 30px;
+    line-height: 36px;
+}
+.btnCardlessDIV
+{
+    position: absolute;
+    /*background-image: url("../img/btn_rectangle.png");*/
+    background-repeat: no-repeat;
+    width: 395px;
+    height: 202px;
+    top: 492px;
+    left: 827px;
+    overflow: hidden;
+
+    border: 1px solid #969696;
+    background: #FFFFFF;
+    -webkit-border-radius: 12px;
+    -moz-border-radius: 12px;
+    border-radius: 12px;
+    behavior: url(css3pie/PIE.htc);
+    box-shadow: 0px 2px 0px #969696;
+
+    idleBgColor:#FFFFFF;
+    actBgColor:#E9F2E3;
+}
+.btnCardlessImg
+{
+    margin: 0;
+    display: table-cell;
+    vertical-align: middle;
+}
+.btnCardlessWrapper
+{
+    display: table;
+
+    height: 100%;
+}
+.btnCardlessText
+{
+    color: #238441;
+    font-family: ProximaNova;
+    font-size: 42px;
+    line-height: 42px;
+
+
+    /*height: 150px;*/
+}
+.btnBlindWrapper
+{
+    display: table;
+    width: 260px;
+    height: 100%;
+
+}
+.btnBlind
+{
+    position: absolute;
+    background-image: url("../img/btn_blind.png");
+    background-repeat: no-repeat;
+    width: 395px;
+    height: 120px;
+    top: 804px;
+    left: 827px;
+    padding-left: 132px;
+    overflow: hidden;
+}
+
+
+.btnBlindText
+{
+    color: #FFFFFF;
+    font-family: ProximaNova;
+    font-size: 30px;
+    line-height: 30px;
+    width: 260px;
+    display: table-cell;
+    vertical-align: middle;
+
+}
+.ADSImage
+{
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 768px;
+    height: 1024px;
+    background-image: url("../img/ADS/2.png");
+}
