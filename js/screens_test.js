@@ -2,7 +2,7 @@
 
 	this.getTestSCR = function (scrData) {
 
-
+console.log(scrData);
 		function btn1()
 		{
 			alert(1);
@@ -95,8 +95,9 @@ console.log(scrData);
 			alert('Exit');
 		}
 		// console.log(scrData);
-		scrData.title = {};
-		scrData.title.text = 'Выберите карту, \n которую необходимо закрыть';
+		// scrData.title = {};
+		scrData.title = 'Выберите карту, \n которую необходимо закрыть';
+
 		scrData.cancelBtn = {};
 		scrData.cancelBtn.text = 'выйти';
 		scrData.cancelBtn.icon = 'img/icons/40 Icon-Cancel.png';
