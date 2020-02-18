@@ -185,10 +185,11 @@ function loadContent() {
 			scrData = sc[funcName](scrData);
 			setSCRTimeout(scrData);
 			if(!!scrData) {
+
 				virtualCardsLoader(scrData);
 				applicationsLoader(scrData);
 				loadCommon(scrData);
-				// menuLongLoader(scrData);
+				menuLongLoader(scrData);
 				callBodyOnLoad(scrData);
 			}
 			return;

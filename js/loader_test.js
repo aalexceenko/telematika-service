@@ -98,8 +98,8 @@ function applicationsLoader(scrData) {
 	var elem = null;
 	var blindMode = true;//RSHBActX.GetBlindMode();
 	renderBtnIcon(scrData,'continueBtn');
-	console.log(scrData.cards);
-	console.log(111);
+	// console.log(scrData.cards);
+	// console.log(111);
 
 	if(!!scrData.cards)
 	{
@@ -432,33 +432,36 @@ function virtualCardsLoader(scrData) {
 	var elem = null;
 	var blindMode = true;//RSHBActX.GetBlindMode();
 	renderBtnIcon(scrData,'continueBtn');
-console.log(scrData.cards);
 	if(!!scrData.cards)
 	{
-		console.log(scrData.cards);
-		console.log(7777);
-		for(var i =0; i < 6;i++) {
-			console.log(scrData.cards[i]);
+		// console.log(scrData.cards);
+		// console.log(7777);
+		for(var i = 0; i < 6;i++) {
+			// console.log(scrData.cards[i]);
 			if (!!scrData.cards[i]) {
 				if (!!scrData.cards[i].logo) {
+					// console.log(scrData.cards[i].logo);
+					// console.log(scrData.isBlind);
 					if (scrData.isBlind !== true)
-						document.getElementById('cardLogo' + i).style.backgroundImage = "url('" + scrData.cards[i].logo + "')";
+						document.getElementById('cardLogo' + (i + 1)).style.backgroundImage = "url('" + scrData.cards[i].logo + "')";
 					else {
-						document.getElementById('cardLogo' + i).style.backgroundImage = "url('" + scrData.cards[i].logo.replace('.png', '_blind.png') + "')";
+						document.getElementById('cardLogo' + (i + 1)).style.backgroundImage = "url('" + scrData.cards[i].logo.replace('.png', '_blind.png') + "')";
 					}
 				}
 				if (!!scrData.cards[i].name) {
-					document.getElementById('cardName' + i).innerText = scrData.cards[i].name;
+					// console.log(scrData.cards[i].name);
+					// console.log(document.getElementById('cardName' + (i + 1)));
+					document.getElementById('cardName' + (i + 1)).innerText = scrData.cards[i].name;
 				}
 				if (!!scrData.cards[i].pan) {
-					document.getElementById('cardPan' + i).innerText = scrData.cards[i].pan;
+					document.getElementById('cardPan' + (i + 1)).innerText = scrData.cards[i].pan;
 				}
 				if(!!scrData.cards[i].onclick)
 				{
-					document.getElementById('cardItem' + i).onclickF = scrData.cards[i].onclick;
+					document.getElementById('cardItem' + (i + 1)).onclickF = scrData.cards[i].onclick;
 				}
 
-				document.getElementById('cardItem' + i).style.visibility = 'visible';
+				document.getElementById('cardItem' + (i + 1)).style.visibility = 'visible';
 				if(!!scrData.cards[i].hwLink)
 				{
 					if(!!scrData.hwLinks)
