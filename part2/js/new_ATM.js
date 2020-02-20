@@ -117,7 +117,7 @@ var addElementToArray = (i) => {
         coinsValue = moneyValue.value;
 
         if (isActive && (coinsCount !== undefined) && (coinsValue !== undefined)) {
-            coins.push({ "value": coinsValue, "count": coinsCount});
+            // coins.push({ "value": coinsValue, "count": coinsCount});
             console.log(coins);
         }
    
@@ -127,7 +127,7 @@ var addElementToArray = (i) => {
         console.log(moneyCount.value);
         coinsCount = moneyCount.value;
         if (isActive && (coinsCount !== undefined) && (coinsValue !== undefined)) {
-            coins.push({ "value": coinsValue, "count": coinsCount});
+            // coins.push({ "value": coinsValue, "count": coinsCount});
             console.log(coins);
             
         }
@@ -137,13 +137,24 @@ var addElementToArray = (i) => {
         coinsActive = false;
         if (isActive.checked) {
             coinsActive = true;
-        }
-        console.log(coinsActive);
-        if (isActive && (coinsCount !== undefined) && (coinsValue !== undefined)) {
-            // var coins = [{ "value": coinsValue, "count": coinsCount}];
-            coins.push({ "value": coinsValue, "count": coinsCount});
+            if (isActive && (coinsCount !== undefined) && (coinsValue !== undefined)) {
+                // var coins = [{ "value": coinsValue, "count": coinsCount}];
+                coins.push({ "value": coinsValue, "count": coinsCount});
+                console.log(coins);
+            }
+        } else {
+            coins = Array.prototype.pop.call(coins);
+            // coins.pop();
+            // obj.coins.pop();
+            // coins.pop({ "value": coinsValue, "count": coinsCount});
             console.log(coins);
         }
+        console.log(coinsActive);
+        // if (isActive && (coinsCount !== undefined) && (coinsValue !== undefined)) {
+        //     // var coins = [{ "value": coinsValue, "count": coinsCount}];
+        //     coins.push({ "value": coinsValue, "count": coinsCount});
+        //     console.log(coins);
+        // }
     });
     // console.log(coins);
 
