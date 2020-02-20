@@ -1,110 +1,83 @@
+function validate(evt) {
+    var theEvent = evt || window.event;
+  
+    // Handle paste
+    if (theEvent.type === 'paste') {
+        key = event.clipboardData.getData('text/plain');
+    } else {
+    // Handle key press
+        var key = theEvent.keyCode || theEvent.which;
+        key = String.fromCharCode(key);
+    }
+    var regex = /[0-9]/;
+    if( !regex.test(key) ) {
+      theEvent.returnValue = false;
+      if(theEvent.preventDefault) theEvent.preventDefault();
+    }
+  }
 
 const cellCount = document.querySelector('#cellCount');
-
 const cellListElement = document.querySelector(`.cells-container`);
+// let amount = cellListElement.querySelector('#amount').value;
+
+let CELL_COUNT;
+let coins = {push:function push(element){ [].push.call(this,element)}};
 
 const createCellsListTemplate = (i) => (
-    `<div class="info-block">
-        <label title="100, 200,500, 1000, 2000, 5000">Номинал: <input class="money-value" id="moneyValue${i}" type="number" min="100" max="5000" ></label>
-        <label>Кол-во купюр: <input class="money-count" id="moneyCount${i}" type="number" min="0"></label>
+    `<fieldset class="info-block">
+        <label title="100, 200, 500, 1000, 2000, 5000">Номинал: 
+            <select name="select" id="moneyValue${i}"> 
+                <option value="100">100</option> 
+                <option value="200">200</option> 
+                <option value="500">500</option> 
+                <option value="1000">1000</option> 
+                <option value="2000">2000</option> 
+                <option value="5000">5000</option> 
+                </option>
+            </select>
+        </label>
+        <label>Кол-во купюр: <input type="text" onkeypress='validate(event)' class="money-count" id="moneyCount${i}"></label>
         <label>Исправна: <input class="cell-availible" id="isActive${i}" type="checkbox"></label>
-    </div>`
+    </fieldset>`
 );
+
 
 const render = (container, template, place) => {
     container.insertAdjacentHTML(place, template);
   };
 
-
-
-let CELL_COUNT;
-var flag = false;
-console.log(flag);
-// let coins = [];
-var coins = {push:function push(element){ [].push.call(this,element)}};
-console.log(coins);
-
-
-var addCellsCount = () => {
+let addCellsCount = () => {
 
     CELL_COUNT = cellCount.value;
-    for (let i = 0; i < CELL_COUNT; i++) {
-        // debugger;
-        new Array(CELL_COUNT)
-            .fill(``)
-            .forEach(
-                () => render(cellListElement, createCellsListTemplate(i), `beforeend`)
-            );
+    cellCount.disabled = true;
 
-        
-    // const moneyValue = document.querySelector('#moneyValue');
-    // console.log(moneyValue);
-    // const moneyCount = document.querySelector('#moneyCount');
-    // const isActive = document.querySelector('#isActive');
+    if(!CELL_COUNT || CELL_COUNT <1 || CELL_COUNT > 8) {
+        alert('Диапазон от 1 до 8.');
+        cellCount.value = '';
+    } else {
+        for (let i = 0; i < CELL_COUNT; i++) {
+            new Array(CELL_COUNT)
+                .fill(``)
+                .forEach(
+                    
+                    () => render(cellListElement, createCellsListTemplate(i), `afterbegin`)
+                );
     
-    // // if (flag) {
-    //     let coinsCount, coinsActive, coinsValue;
-    //     // let coinsValue = moneyValue.value;
-    // // }
-    
-    // moneyValue.addEventListener('change', function () {
-    //     console.log(moneyValue.value);
-    //     coinsValue = moneyValue.value;
-
-    //     if (isActive && (coinsCount !== undefined) && (coinsValue !== undefined)) {
-    //         coins.push({ "value": coinsValue, "count": coinsCount});
-    //         console.log(coins);
-    //     }
-    //     // return coinsValue;
-    // });
-
-    // moneyCount.addEventListener('change', function () {
-    //     console.log(moneyCount.value);
-    //     coinsCount = moneyCount.value;
-    //     if (isActive && (coinsCount !== undefined) && (coinsValue !== undefined)) {
-    //         // var coins = [{ "value": coinsValue, "count": coinsCount}];
-    //         coins.push({ "value": coinsValue, "count": coinsCount});
-    //         console.log(coins);
-            
-    //     }
-    //     // return coinsCount;
-    // });
-
-    // isActive.addEventListener('change', function () {
-    //     coinsActive = false;
-    //     if (isActive.checked) {
-    //         coinsActive = true;
-    //     }
-    //     console.log(coinsActive);
-    //     if (isActive && (coinsCount !== undefined) && (coinsValue !== undefined)) {
-    //         // var coins = [{ "value": coinsValue, "count": coinsCount}];
-    //         coins.push({ "value": coinsValue, "count": coinsCount});
-    //         console.log(coins);
-    //     }
-    // });
-    };
-
-    const divCount = document.querySelectorAll('.info-block');
-    // const divCount = document.querySelectorAll('.info-block');
-    console.log(divCount.length);
-    if (cellCount.value !== '') {
-        // debugger;
-        for (let i = 0; i < divCount.length; i++) {
-            addElementToArray(i);
-            // console.log(coins);
-
-        }
-        
+        };
     }
-    
 };
-
 
 
 cellCount.addEventListener('change', addCellsCount);
 
+const btnCount = document.querySelector('.form-btn');
 
-var addElementToArray = (i) => {
+
+
+
+
+
+let addElementToArray = (i) => {
 
     var moneyValue = document.querySelector('#moneyValue' + i);
     var moneyCount = document.querySelector('#moneyCount' + i);
@@ -112,62 +85,23 @@ var addElementToArray = (i) => {
 
     let coinsCount, coinsActive, coinsValue;
     
-    moneyValue.addEventListener('change', function () {
-        console.log(moneyValue.value);
-        coinsValue = moneyValue.value;
 
+    coinsValue = moneyValue.value;
+    coinsCount = moneyCount.value;
+    coinsActive = false;
+
+    if (isActive.checked) {
+        coinsActive = true;
         if (isActive && (coinsCount !== undefined) && (coinsValue !== undefined)) {
-            // coins.push({ "value": coinsValue, "count": coinsCount});
+
+            coins.push({ "value": coinsValue, "count": coinsCount});
             console.log(coins);
         }
-   
-    });
+    } 
 
-    moneyCount.addEventListener('change', function () {
-        console.log(moneyCount.value);
-        coinsCount = moneyCount.value;
-        if (isActive && (coinsCount !== undefined) && (coinsValue !== undefined)) {
-            // coins.push({ "value": coinsValue, "count": coinsCount});
-            console.log(coins);
-            
-        }
-    });
-
-    isActive.addEventListener('change', function () {
-        coinsActive = false;
-        if (isActive.checked) {
-            coinsActive = true;
-            if (isActive && (coinsCount !== undefined) && (coinsValue !== undefined)) {
-                // var coins = [{ "value": coinsValue, "count": coinsCount}];
-                coins.push({ "value": coinsValue, "count": coinsCount});
-                console.log(coins);
-            }
-        } else {
-            coins = Array.prototype.pop.call(coins);
-            // coins.pop();
-            // obj.coins.pop();
-            // coins.pop({ "value": coinsValue, "count": coinsCount});
-            console.log(coins);
-        }
-        console.log(coinsActive);
-        // if (isActive && (coinsCount !== undefined) && (coinsValue !== undefined)) {
-        //     // var coins = [{ "value": coinsValue, "count": coinsCount}];
-        //     coins.push({ "value": coinsValue, "count": coinsCount});
-        //     console.log(coins);
-        // }
-    });
-    // console.log(coins);
-
-    return coins;
 };
 
-
-// debugger;
-
-
-
-
-const getChange = (coins, amount, coinIndex = 0) => {
+let getChange = (coins, amount, coinIndex = 0) => {
     if (amount === 0){
         return [];
     }
@@ -178,7 +112,7 @@ const getChange = (coins, amount, coinIndex = 0) => {
     let coin = coins[coinIndex];
     coinIndex += 1;
     canTake = Math.min(parseInt(amount / coin.value), coin.count);
-    // console.log(canTake);
+
     for (let count = canTake; count > -1; count--){
         change = getChange(coins, amount - coin.value * count, coinIndex);
         if (change !== null){
@@ -191,51 +125,106 @@ const getChange = (coins, amount, coinIndex = 0) => {
     }
 }
 
-const main = (amount) => {
+let doTextResult = (amount) => {
 
-    // MUST BE SORTED IN DESCENDING ORDER BY VALUE !!!!
-    // let coins = [
-    //     { "value": 5000, "count": 2},   
-    //     { "value": 2000, "count": 543434},
-    //     { "value": 1000, "count": 44345},
-    //     { "value": 500, "count": 5461115},
-    //     { "value": 200, "count": 178678870},
-    //     { "value": 100, "count": 504534540}
-    // ];
     let sum = 0;
-    for (let i=0; i < coins.length; i++){
+    for (let i = 0; i < coins.length; i++){
         let{value,count} = coins[i];
         sum += value * count;
     }
-    // console.log(`Balance is ${sum} rubles`)
+
     if (amount <= sum){
         if (amount % coins[coins.length-1].value === 0){
             result = getChange(coins, amount);
             if (result !== undefined){
-                console.log(`For ${amount} rubles the ATM can give you:`);
-                for (let i=0; i < result.length; i++){
+                // alert(`For ${amount} rubles the ATM can give you:`);
+                for (let i = 0; i < result.length; i++){
                     let{value,count} = result[i];
-                    console.log(`\t\t\t\t${count} denomination of ${value} rubles`);
+                    alert(`For ${amount} rubles the ATM can give you: ${count} denomination of ${value} rubles`);
                 }
             } else {
-                console.log('No change money in the ATM');
+                // console.log('No change money in the ATM');
+                alert('No change money in the ATM');
+
             } 
         } else {
-            console.log(`Must be a multiple of ${coins[coins.length-1].value}`);
+            // console.log(`Must be a multiple of ${coins[coins.length-1].value}`);
+            alert(`Must be a multiple of ${coins[coins.length - 1].value}`);
+
         }
     }
     else {
-        console.log('Not enough money in the ATM');
+        // console.log('Not enough money in the ATM');
+        alert('Not enough money in the ATM');
     }
 };
 
-if (coins.length > 0){
-    var amount = 13600;
-    var t0 = performance.now();
-    main(amount);
-    var t1 = performance.now();
-    console.log(`Execution time was ${t1 - t0} milliseconds`);
-}
+
+let doCount = () => {
+    let temp_keys = [];
+    let temp_count = [];
+    let temp_map = [];
+    for (i = 0; i < coins.length; i++) {
+        if (temp_keys.includes(coins[i].value)){
+            let index = temp_keys.indexOf(coins[i].value)
+            temp_map[index] = {"value": coins[i].value, "count": parseInt(coins[i].count) + parseInt(temp_count[index])};
+            temp_count[index] = parseInt(coins[i].count) + parseInt(temp_count[index]);
+        } else {
+            temp_keys.push(coins[i].value);
+            temp_count.push(coins[i].count);
+            temp_map.push({"value": coins[i].value, "count": coins[i].count});
+        } 
+    }
+    Array.prototype.sort_by = function(key_func, reverse=false){
+        return this.sort( (a, b) => ( key_func(b) - key_func(a) ) * (reverse ? 1 : -1) ) 
+    }
+    temp_map.sort_by(el => el.value, reverse=true);
+    coins = temp_map;
+    
+    var amount = cellListElement.querySelector('#amount').value;
+
+        if (coins.length > 0 && (amount !== '')){
+            var t0 = performance.now();
+            doTextResult(amount);
+            var t1 = performance.now();
+            alert(`Execution time was ${t1 - t0} milliseconds`);
+        }
+};
+
+let doCountAllCells = () => {
+
+    let fieldsetCellListElement = cellListElement.querySelectorAll('.info-block');
+    for (let i = 0; i < fieldsetCellListElement.length; i++) {
+        fieldsetCellListElement[i].disabled = true;
+        addElementToArray(i);
+    }
+
+    doCount();
+
+};
+
+
+btnCount.addEventListener('click', doCountAllCells);
+
+
+const btnReset = cellListElement.querySelector('.form-reset');
+const doReset = () => {
+    cellCount.value = '';
+    coins = [];
+    cellCount.disabled = false;
+
+
+    let node = document.querySelectorAll('.info-block');
+    for (var i = 0; i < node.length; i++) {
+        console.log(90);
+        if (node[i].parentNode) {
+            node[i].parentNode.removeChild(node[i]);
+          }
+    }
+
+};
+
+btnReset.addEventListener('click', doReset);
 
 
 

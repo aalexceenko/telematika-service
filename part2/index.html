@@ -4,18 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../part2/style/style.css">
   <title>Document</title>
 </head>
 <body>
   <label>Введите кол-во кассет от 1 до 8: <input id="cellCount" type="number" min="1" max="8"></label>
-  <section class="cells-container">
-    <!-- <div class="info-block">
-        <label title="100, 200,500, 1000, 2000, 5000">Номинал: <input id="moneyValue" type="number" min="100" max="5000" ></label>
-        <label>Кол-во купюр: <input id="moneyCount" type="number" min="0"></label>
-        <label>Исправна: <input id="isActive" type="checkbox"></label>
-    </div> -->
-  </section>
+  <form class="cells-container">
+    <div class="cotainer-btn">
+        <label>Введите сумму: <input id="amount" type="text" onkeypress='validate(event)'></label>
+        <button class="form-btn" type="button">Посчитать</button>
+        <!-- <input class="form-btn" type="text"> -->
+
+        <button class="form-reset" type="reset">Сбросить</button>
+    </div>
+
+  </form>
   <script src="../part2/js/new_ATM.js"></script>
-  <!-- <script src="../part2/js/atm.js"></script> -->
+
 </body>
 </html>
