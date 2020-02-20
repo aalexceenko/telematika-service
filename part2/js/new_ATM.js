@@ -18,14 +18,13 @@ function validate(evt) {
 
 const cellCount = document.querySelector('#cellCount');
 const cellListElement = document.querySelector(`.cells-container`);
-// let amount = cellListElement.querySelector('#amount').value;
 
 let CELL_COUNT;
-let coins = {push:function push(element){ [].push.call(this,element)}};
+let bills = {push:function push(element){ [].push.call(this,element)}};
 
 const createCellsListTemplate = (i) => (
     `<fieldset class="info-block">
-        <label title="100, 200, 500, 1000, 2000, 5000">Номинал: 
+        <label title="100, 200, 500, 1000, 2000, 5000">Value: 
             <select name="select" id="moneyValue${i}"> 
                 <option value="100">100</option> 
                 <option value="200">200</option> 
@@ -36,8 +35,8 @@ const createCellsListTemplate = (i) => (
                 </option>
             </select>
         </label>
-        <label>Кол-во купюр: <input type="text" onkeypress='validate(event)' class="money-count" id="moneyCount${i}"></label>
-        <label>Исправна: <input class="cell-availible" id="isActive${i}" type="checkbox"></label>
+        <label>Number of: <input type="text" onkeypress='validate(event)' class="money-count" id="moneyCount${i}"></label>
+        <label>Avaliable: <input class="cell-availible" id="isActive${i}" type="checkbox"></label>
     </fieldset>`
 );
 
@@ -49,12 +48,12 @@ const render = (container, template, place) => {
 let addCellsCount = () => {
 
     CELL_COUNT = cellCount.value;
-    cellCount.disabled = true;
 
     if(!CELL_COUNT || CELL_COUNT <1 || CELL_COUNT > 8) {
         alert('Диапазон от 1 до 8.');
         cellCount.value = '';
     } else {
+        cellCount.disabled = true;
         for (let i = 0; i < CELL_COUNT; i++) {
             new Array(CELL_COUNT)
                 .fill(``)
@@ -73,51 +72,45 @@ cellCount.addEventListener('change', addCellsCount);
 const btnCount = document.querySelector('.form-btn');
 
 
-
-
-
-
 let addElementToArray = (i) => {
 
     var moneyValue = document.querySelector('#moneyValue' + i);
     var moneyCount = document.querySelector('#moneyCount' + i);
     var isActive = document.querySelector('#isActive' + i);
 
-    let coinsCount, coinsActive, coinsValue;
+    let billsCount, billsActive, billsValue;
     
 
-    coinsValue = moneyValue.value;
-    coinsCount = moneyCount.value;
-    coinsActive = false;
+    billsValue = moneyValue.value;
+    billsCount = moneyCount.value;
+    billsActive = false;
 
     if (isActive.checked) {
-        coinsActive = true;
-        if (isActive && (coinsCount !== undefined) && (coinsValue !== undefined)) {
-
-            coins.push({ "value": coinsValue, "count": coinsCount});
-            console.log(coins);
+        billsActive = true;
+        if (isActive && (billsCount !== undefined) && (billsValue !== undefined)) {
+            bills.push({ "value": billsValue, "count": billsCount});
         }
     } 
 
 };
 
-let getChange = (coins, amount, coinIndex = 0) => {
+let getChange = (bills, amount, billIndex = 0) => {
     if (amount === 0){
         return [];
     }
-    if (coinIndex >= coins.length){
+    if (billIndex >= bills.length){
         return null;
     }
 
-    let coin = coins[coinIndex];
-    coinIndex += 1;
-    canTake = Math.min(parseInt(amount / coin.value), coin.count);
+    let bill = bills[billIndex];
+    billIndex += 1;
+    canTake = Math.min(parseInt(amount / bill.value), bill.count);
 
     for (let count = canTake; count > -1; count--){
-        change = getChange(coins, amount - coin.value * count, coinIndex);
+        change = getChange(bills, amount - bill.value * count, billIndex);
         if (change !== null){
             if (count){
-                change.push({"value": coin.value, "count": count});
+                change.push({"value": bill.value, "count": count});
                 return change;
             }
             return change;
@@ -128,33 +121,31 @@ let getChange = (coins, amount, coinIndex = 0) => {
 let doTextResult = (amount) => {
 
     let sum = 0;
-    for (let i = 0; i < coins.length; i++){
-        let{value,count} = coins[i];
+    for (let i = 0; i < bills.length; i++){
+        let{value,count} = bills[i];
         sum += value * count;
     }
 
     if (amount <= sum){
-        if (amount % coins[coins.length-1].value === 0){
-            result = getChange(coins, amount);
+        if (amount % bills[bills.length-1].value === 0){
+            result = getChange(bills, amount);
             if (result !== undefined){
-                // alert(`For ${amount} rubles the ATM can give you:`);
+                let = alert_string = `For ${amount} rubles the ATM can give you:\n`;
                 for (let i = 0; i < result.length; i++){
                     let{value,count} = result[i];
-                    alert(`For ${amount} rubles the ATM can give you: ${count} denomination of ${value} rubles`);
+                    alert_string += `\t\t\t\t\t\t\t${count} denomination of ${value} rubles\n`;
                 }
+                alert(alert_string);
             } else {
-                // console.log('No change money in the ATM');
                 alert('No change money in the ATM');
 
             } 
         } else {
-            // console.log(`Must be a multiple of ${coins[coins.length-1].value}`);
-            alert(`Must be a multiple of ${coins[coins.length - 1].value}`);
+            alert(`Must be a multiple of ${bills[bills.length - 1].value}`);
 
         }
     }
     else {
-        // console.log('Not enough money in the ATM');
         alert('Not enough money in the ATM');
     }
 };
@@ -164,26 +155,31 @@ let doCount = () => {
     let temp_keys = [];
     let temp_count = [];
     let temp_map = [];
-    for (i = 0; i < coins.length; i++) {
-        if (temp_keys.includes(coins[i].value)){
-            let index = temp_keys.indexOf(coins[i].value)
-            temp_map[index] = {"value": coins[i].value, "count": parseInt(coins[i].count) + parseInt(temp_count[index])};
-            temp_count[index] = parseInt(coins[i].count) + parseInt(temp_count[index]);
+
+    for (i = 0; i < bills.length; i++) {
+
+        if (temp_keys.includes(bills[i].value)){
+            let index = temp_keys.indexOf(bills[i].value)
+            temp_map[index] = {"value": bills[i].value, "count": parseInt(bills[i].count) + parseInt(temp_count[index])};
+            temp_count[index] = parseInt(bills[i].count) + parseInt(temp_count[index]);
+
         } else {
-            temp_keys.push(coins[i].value);
-            temp_count.push(coins[i].count);
-            temp_map.push({"value": coins[i].value, "count": coins[i].count});
+            temp_keys.push(bills[i].value);
+            temp_count.push(bills[i].count);
+            temp_map.push({"value": bills[i].value, "count": bills[i].count});
         } 
     }
+
     Array.prototype.sort_by = function(key_func, reverse=false){
         return this.sort( (a, b) => ( key_func(b) - key_func(a) ) * (reverse ? 1 : -1) ) 
     }
+    
     temp_map.sort_by(el => el.value, reverse=true);
-    coins = temp_map;
+    bills = temp_map;
     
     var amount = cellListElement.querySelector('#amount').value;
 
-        if (coins.length > 0 && (amount !== '')){
+        if (bills.length > 0 && (amount !== '')){
             var t0 = performance.now();
             doTextResult(amount);
             var t1 = performance.now();
@@ -210,13 +206,12 @@ btnCount.addEventListener('click', doCountAllCells);
 const btnReset = cellListElement.querySelector('.form-reset');
 const doReset = () => {
     cellCount.value = '';
-    coins = [];
+    bills = [];
     cellCount.disabled = false;
 
 
     let node = document.querySelectorAll('.info-block');
     for (var i = 0; i < node.length; i++) {
-        console.log(90);
         if (node[i].parentNode) {
             node[i].parentNode.removeChild(node[i]);
           }
